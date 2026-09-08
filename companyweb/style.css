@@ -1,0 +1,1035 @@
+/* =========================================
+   NEXORA TECHNOLOGIES
+   ORANGE + DARK NAVY CORPORATE THEME
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #334155;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 82px;
+    background: #0f172a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #f97316;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #f97316;
+    margin-top: 4px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar nav a {
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #f97316;
+}
+
+.navbar .logout-btn {
+    background: #f97316;
+    color: #ffffff;
+    padding: 11px 20px;
+    border-radius: 4px;
+    border: 1px solid #f97316;
+}
+
+.navbar .logout-btn:hover {
+    background: transparent;
+    color: #f97316;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 650px;
+    background:
+        linear-gradient(
+            120deg,
+            #0f172a 0%,
+            #172554 60%,
+            #1e293b 100%
+        );
+
+    display: flex;
+    align-items: center;
+    padding: 90px 7%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 70px solid rgba(249, 115, 22, 0.12);
+    border-radius: 50%;
+    right: -130px;
+    top: 80px;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-label {
+    color: #fb923c;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: 62px;
+    line-height: 1.08;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #f97316;
+}
+
+.hero-text {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #cbd5e1;
+    margin-top: 25px;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 14px 27px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #f97316;
+    color: #ffffff;
+    border: 2px solid #f97316;
+}
+
+.primary-btn:hover {
+    background: #ea580c;
+    border-color: #ea580c;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border: 2px solid #64748b;
+    color: #ffffff;
+}
+
+.secondary-btn:hover {
+    border-color: #f97316;
+    color: #f97316;
+}
+
+
+/* =========================================
+   EMPLOYEE PORTAL SECTION
+========================================= */
+
+.employee-section {
+    padding: 55px 7%;
+    background: #ffffff;
+}
+
+.employee-card {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 35px;
+    background: #0f172a;
+    border-radius: 8px;
+    border-top: 4px solid #f97316;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.15);
+}
+
+.employee-icon {
+    width: 60px;
+    height: 60px;
+    background: #f97316;
+    color: #ffffff;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.employee-card h2 {
+    margin: 4px 0 7px;
+    color: #ffffff;
+}
+
+.employee-card p {
+    margin: 5px 0;
+    color: #cbd5e1;
+}
+
+.small-title {
+    color: #fb923c !important;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.employee-email {
+    font-size: 14px;
+    color: #94a3b8 !important;
+}
+
+.approved-badge {
+    margin-left: auto;
+    background: rgba(249, 115, 22, 0.15);
+    color: #fb923c;
+    border: 1px solid rgba(249, 115, 22, 0.4);
+    padding: 9px 15px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 55px;
+}
+
+.section-label {
+    color: #f97316;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    color: #0f172a;
+    margin: 0 0 15px;
+    font-weight: 800;
+}
+
+.section-heading p:last-child {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 29px;
+    color: #0f172a;
+    margin-top: 0;
+}
+
+.about-text p {
+    color: #64748b;
+    line-height: 1.9;
+}
+
+.about-points {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.about-points div {
+    background: #f1f5f9;
+    border-bottom: 3px solid #f97316;
+    padding: 17px 22px;
+    min-width: 100px;
+}
+
+.about-points strong {
+    color: #f97316;
+    display: block;
+    font-size: 21px;
+    margin-bottom: 4px;
+}
+
+.about-points span {
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.about-box {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 45px;
+    border-radius: 5px;
+    border-left: 5px solid #f97316;
+    box-shadow: 15px 15px 0 #f97316;
+}
+
+.about-box-icon {
+    font-size: 40px;
+}
+
+.about-box h3 {
+    font-size: 26px;
+    margin: 20px 0 12px;
+}
+
+.about-box p {
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-section {
+    background: #f1f5f9;
+}
+
+.service-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 32px 27px;
+    border-radius: 5px;
+    border-top: 3px solid transparent;
+
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.07);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-top-color: #f97316;
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.12);
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+    background: #fff7ed;
+    color: #f97316;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    font-size: 28px;
+    margin-bottom: 22px;
+}
+
+.service-card h3 {
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.service-card p {
+    color: #64748b;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+
+.why-section {
+    padding: 100px 7%;
+    background: #ffffff;
+}
+
+.why-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    padding: 28px;
+    background: #f8fafc;
+    border-left: 3px solid #f97316;
+    border-radius: 2px;
+}
+
+.why-card h3 {
+    color: #0f172a;
+    margin-top: 0;
+}
+
+.why-card p {
+    color: #64748b;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    background: #f1f5f9;
+}
+
+.contact-grid {
+    max-width: 950px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 5px;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.07);
+}
+
+.contact-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+
+    background: #0f172a;
+    color: #f97316;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.contact-card h3 {
+    color: #0f172a;
+}
+
+.contact-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #080f1d;
+    color: #ffffff;
+    text-align: center;
+    padding: 55px 20px;
+    border-top: 4px solid #f97316;
+}
+
+.footer-logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.footer p {
+    color: #94a3b8;
+}
+
+.footer .copyright {
+    margin-top: 28px;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   LOGIN + REGISTER PAGE
+========================================= */
+
+body:has(.login-container),
+body:has(.register-container) {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #172554
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.login-container,
+.register-container {
+    width: 430px;
+    max-width: 100%;
+    margin: 0;
+
+    background: #ffffff;
+    padding: 42px;
+
+    border-radius: 6px;
+
+    border-top: 5px solid #f97316;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.company-name {
+    text-align: center;
+    color: #0f172a;
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.login-title,
+.register-title {
+    text-align: center;
+    color: #f97316;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.login-container label,
+.register-container label {
+    display: block;
+    margin-top: 17px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #334155;
+    font-size: 14px;
+}
+
+.login-container input,
+.register-container input {
+    width: 100%;
+    padding: 13px;
+
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+
+    font-size: 15px;
+    color: #0f172a;
+}
+
+.login-container input:focus,
+.register-container input:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+    background: #ffffff;
+}
+
+.login-container button,
+.register-container button {
+    width: 100%;
+    padding: 14px;
+
+    margin-top: 25px;
+
+    background: #f97316;
+    color: #ffffff;
+
+    border: 2px solid #f97316;
+    border-radius: 4px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover,
+.register-container button:hover {
+    background: #0f172a;
+    border-color: #0f172a;
+}
+
+.register-text,
+.login-text {
+    text-align: center;
+    margin-top: 22px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.register-text a,
+.login-text a {
+    color: #f97316;
+    font-weight: bold;
+}
+
+.register-text a:hover,
+.login-text a:hover {
+    color: #0f172a;
+}
+
+
+/* =========================================
+   LOGIN / REGISTER MESSAGES
+========================================= */
+
+.message {
+    padding: 13px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.message.error {
+    background: #fff1f2;
+    color: #be123c;
+    border-left: 4px solid #e11d48;
+}
+
+.message.success {
+    background: #fff7ed;
+    color: #c2410c;
+    border-left: 4px solid #f97316;
+}
+
+
+/* =========================================
+   ADMIN DASHBOARD
+========================================= */
+
+.admin-page {
+    background: #f1f5f9;
+    min-height: 100vh;
+}
+
+.admin-header {
+    background:
+        linear-gradient(
+            110deg,
+            #0f172a,
+            #172554
+        );
+
+    color: #ffffff;
+    padding: 35px 40px;
+    text-align: center;
+
+    border-bottom: 5px solid #f97316;
+}
+
+.admin-header h1 {
+    margin: 0 0 8px;
+    letter-spacing: 2px;
+}
+
+.admin-header p {
+    margin: 0;
+    color: #94a3b8;
+}
+
+.admin-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.admin-welcome {
+    background: #0f172a;
+    padding: 28px 30px;
+    margin-bottom: 30px;
+
+    border-radius: 5px;
+    border-left: 5px solid #f97316;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
+}
+
+.admin-welcome h2 {
+    margin: 0 0 8px;
+    color: #ffffff;
+}
+
+.admin-welcome p {
+    margin: 0;
+    color: #94a3b8;
+}
+
+.admin-section {
+    background: #ffffff;
+    padding: 28px;
+    margin-bottom: 30px;
+
+    border-radius: 5px;
+
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.07);
+}
+
+.admin-section h2 {
+    margin-top: 0;
+    color: #0f172a;
+
+    border-bottom: 2px solid #f97316;
+    padding-bottom: 14px;
+}
+
+.admin-table-container {
+    overflow-x: auto;
+}
+
+.admin-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-section th {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 14px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.admin-section td {
+    padding: 14px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+}
+
+.admin-section tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.admin-section tr:hover {
+    background: #fff7ed;
+}
+
+.approve-btn {
+    display: inline-block;
+    padding: 8px 14px;
+
+    background: #f97316;
+    color: #ffffff;
+
+    border-radius: 3px;
+    margin-right: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.approve-btn:hover {
+    background: #ea580c;
+}
+
+.reject-btn {
+    display: inline-block;
+    padding: 8px 14px;
+
+    background: #0f172a;
+    color: #ffffff;
+
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.reject-btn:hover {
+    background: #dc2626;
+}
+
+.status-approved {
+    color: #ea580c;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.empty-message {
+    color: #64748b;
+    padding: 15px 0;
+}
+
+.admin-actions {
+    text-align: center;
+}
+
+.admin-logout {
+    display: inline-block;
+
+    background: #0f172a;
+    color: #ffffff;
+
+    padding: 12px 25px;
+
+    border-radius: 3px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.admin-logout:hover {
+    background: #f97316;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .service-grid,
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-box {
+        box-shadow: 8px 8px 0 #f97316;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 5%;
+    }
+
+    .navbar nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 70px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .employee-card {
+        flex-wrap: wrap;
+    }
+
+    .approved-badge {
+        margin-left: 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-container {
+        width: 95%;
+    }
+
+    .admin-section {
+        padding: 17px;
+    }
+
+    .admin-section th,
+    .admin-section td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - SMALL MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .service-grid,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        text-align: center;
+    }
+
+    .about-points {
+        flex-direction: column;
+    }
+
+    .login-container,
+    .register-container {
+        padding: 28px 23px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .employee-card {
+        padding: 25px 20px;
+    }
+
+    .admin-header {
+        padding: 28px 20px;
+    }
+
+}
