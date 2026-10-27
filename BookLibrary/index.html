@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library | MCA Web Technology Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Book<span>Library</span></div>
+            <p>Discover your next great read</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h1>Explore Our Collection</h1>
+            <p>Search books, explore authors, and discover publications
+               using live data from the Open Library API.</p>
+        </section>
+
+        <section class="search-panel">
+            <form id="searchForm">
+                <label for="searchInput">Search Books</label>
+
+                <div class="search-box">
+                    <input type="search" id="searchInput"
+                           placeholder="Enter book title or author..."
+                           required>
+
+                    <button type="submit" id="searchButton">
+                        Search
+                    </button>
+                </div>
+            </form>
+
+            <div class="filter-row">
+                <div>
+                    <label for="sortSelect">Sort Results</label>
+                    <select id="sortSelect">
+                        <option value="title">Title (A–Z)</option>
+                        <option value="year">Publication Year</option>
+                    </select>
+                </div>
+
+                <div class="result-count" id="resultCount">
+                    0 books found
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div id="statusMessage" class="status-message"
+                 role="status" aria-live="polite">
+                Search for a book to get started.
+            </div>
+
+            <div id="loader" class="loader-container" hidden>
+                <div class="spinner"></div>
+                <p>Fetching books from the API...</p>
+            </div>
+
+            <div id="bookList" class="book-grid"></div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Book Library | Internet and Web Technologies Lab</p>
+        <p>Data provided by Open Library</p>
+    </footer>
+
+</body>
+</html>

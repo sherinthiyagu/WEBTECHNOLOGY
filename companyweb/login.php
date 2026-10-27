@@ -73,9 +73,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 WHERE username = ?
                 OR email = ?
             ";
-
             $employee_stmt = $conn->prepare($employee_sql);
-            $employee_stmt->bind_param("s", $username, $username);
+
+            $employee_stmt->bind_param("ss", $username, $username);
             $employee_stmt->execute();
 
             $employee_result = $employee_stmt->get_result();
