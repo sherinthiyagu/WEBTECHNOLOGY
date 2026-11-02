@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "nexora_company";
+$host = "sql104.infinityfree.com";
+$username = "if0_43283131";
+$password = "12she34rin";
+$database = "if0_43283131_company";
 
 $conn = new mysqli(
     $host,

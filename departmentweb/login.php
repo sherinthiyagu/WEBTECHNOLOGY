@@ -1,5 +1,5 @@
-<?php
 
+<?php
 session_start();
 include "db.php";
 
@@ -11,48 +11,51 @@ if (isset($_POST["login"])) {
     $email = trim($_POST["email"]);
     $password = $_POST["password"];
 
-    /* =========================
-       CHECK USER LOGIN
-       ========================= */
-
     $sql = "SELECT * FROM users WHERE email = ?";
 
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
 
-    $result = $stmt->get_result();
+    if (!$stmt) {
+        error_log("Login prepare failed: " . $conn->error);
+        $message = "Unable to process login right now.";
+        $message_type = "error";
+    } else {
+        $stmt->bind_param("s", $email);
 
-    if ($result->num_rows == 1) {
-
-        $user = $result->fetch_assoc();
-
-        /* =========================
-           VERIFY HASHED PASSWORD
-           ========================= */
-
-        if (password_verify($password, $user["password"])) {
-
-            $_SESSION["user_id"] = $user["id"];
-            $_SESSION["user_name"] = $user["name"];
-
-            header("Location: index.php");
-            exit();
-
-        } else {
-
-            $message = "Invalid email or password";
+        if (!$stmt->execute()) {
+            error_log("Login execute failed: " . $stmt->error);
+            $message = "Unable to process login right now.";
             $message_type = "error";
+        } else {
+            $result = $stmt->get_result();
+
+            if ($result && $result->num_rows === 1) {
+                $user = $result->fetch_assoc();
+
+                if (password_verify($password, $user["password"])) {
+                    $_SESSION["user_id"] = $user["id"];
+
+                    // Use whichever column your table actually has.
+                    $_SESSION["user_name"] = $user["name"]
+                        ?? $user["username"]
+                        ?? "";
+
+                    header("Location: index.php");
+                    exit();
+                }
+            }
+
+            if (empty($message)) {
+                $message = "Invalid email or password";
+                $message_type = "error";
+            }
         }
 
-    } else {
-
-        $message = "Invalid email or password";
-        $message_type = "error";
+        $stmt->close();
     }
 }
-
 ?>
+
 
 
 <!DOCTYPE html>

@@ -5,7 +5,6 @@ $conn = new mysqli(
     "sql104.infinityfree.com",
     "if0_43283131",
     "12she34rin",
-    "if0_43283131_XXX"
 );
 
 if ($conn->connect_error) {
